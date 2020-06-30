@@ -11,24 +11,27 @@ purple = chalk.bgYellowBright.bold.blackBright;
 //Creating  Add command 
 //Whenever add command run through command prompt , handler function get execute automatically:  
 yargs.command({
-   command:'add',
-   description:'Adding a Note :',
-   builder:{
-       title:{
-           demandOption:true,
-           description:'Title of Note',
-           type:'string'
-       },
-       body:{
-           demandOption:true,
-           type:'string',
-           description:'Description of Note :'
+   command:'add',   // name of command
+   description:'Adding a Note :', // description of command
+   builder:{      // variables after the command
+       title:{     // name of variable after the  command
+           demandOption:true,  // requirement of variable
+           description:'Title of Note',  // description of variable
+           type:'string'    // Type of variable
+       }, 
+       body:{       // variables after the command 
+           demandOption:true, // name of variable after the  command
+           type:'string',    // Type of variable
+           description:'Description of Note :'  // description of variable
        }
    },
-   handler:function(argv){
+   handler:function(argv){     // It is handler function , run immediately when command run:
      console.log(green("Adding note to System :"))
    }
 })
+
+//Creating  remove command 
+//Whenever remove command run through command prompt , handler function get execute automatically:  
 
 yargs.command({
     command:'remove',
@@ -45,6 +48,9 @@ yargs.command({
     }
  })
 
+ //Creating  read command 
+//Whenever read command run through command prompt , handler function get execute automatically:  
+
  yargs.command({
     command:'read',
     description:'reading a Note :',
@@ -60,6 +66,9 @@ yargs.command({
     }
  })
 
+ //Creating  list command 
+//Whenever list command run through command prompt , handler function get execute automatically:  
+
  yargs.command({
     command:'list',
     description:'list all  Note :',
@@ -68,4 +77,5 @@ yargs.command({
     }
  })
 
+// apply all changes: 
 yargs.parse(); 
