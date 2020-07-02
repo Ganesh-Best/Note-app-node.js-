@@ -1,6 +1,6 @@
 About Application :
 
- It is command-line based Application . It consist 3 files,first app.js ,2nd index.js,3rd package.json.
+ It is command-line based Application . It consist 3 files,first app.js ,2nd index.js,3rd package.json.You have to remove Notes.json file for Better experience.
 
 => app.js is main file,however in index.js ,I created  functions such as add() ,remove() ,list() & so on and exports them to app.js file:
 =>If you want to run this application ,first of all you have to install node.js in your system(You can search on google):
